@@ -1,0 +1,80 @@
+@import 'variables';
+
+@font-face {
+    font-family: GE-SS;
+    src: url(../fonts/GE_SS_Two_Medium.otf);
+}
+
+body {
+    font-family: 'GE-SS', Verdana, Tahoma, sans-serif !important;
+}
+
+.logo {
+    width: 60px;
+    padding-bottom: 12px;
+}
+
+.navbar {
+    background-color: $navbar-background;
+
+    .navbar-brand {
+        a {
+            text-decoration: none;
+            color: $dark-color;
+            font-size: 1.5rem;
+        }
+    }
+
+    .navbar-toggler {
+        color: $dark-color;
+        border: 0;
+        font-size: 25px;
+
+    }
+
+    ul li {
+        padding-right: 10px;
+    }
+
+    ul .nav-item a {
+        color: $dark-color !important;
+        padding: 0.5rem 1.1rem !important;
+
+        &:hover {
+            background-color: white;
+            border-top-left-radius: 20px;
+            border-bottom-left-radius: 20px;
+            color: $brand-color !important;
+        }
+    }
+
+}
+
+.custom-heading {
+    font-size: 40px !important;
+    line-height: 60px;
+}
+
+section.about {
+    background-color: $brand-color;
+    padding: 30px 0px;
+    color: $light-color;
+
+    .about-description{
+        padding-top: 3rem;
+        padding-right: 0px !important;
+    }
+
+    .books-img{
+        padding-right: 0 !important;
+
+        img{
+            height: 400px;
+        }
+    }
+
+    p{
+        line-height: 27px;
+        text-align: justify;
+    }
+}
