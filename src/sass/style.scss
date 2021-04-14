@@ -30,6 +30,18 @@ body {
         border: 0;
         font-size: 25px;
 
+        &:hover {
+            color: $brand-color;
+        }
+
+        &:focus {
+            color: $brand-color;
+            outline: none;
+        }
+
+        &:active {
+            color: $brand-color;
+        }
     }
 
     ul li {
@@ -50,31 +62,245 @@ body {
 
 }
 
-.custom-heading {
+.top-heading {
     font-size: 40px !important;
     line-height: 60px;
 }
 
 section.about {
-    background-color: $brand-color;
-    padding: 30px 0px;
+    background-image: url(../images/library-books.jpg);
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 35px 0px;
     color: $light-color;
+    position: relative;
 
-    .about-description{
+    .layer {
+        background-color: $brand-color;
+        opacity: 0.89;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+    }
+
+    .about-description {
         padding-top: 3rem;
         padding-right: 0px !important;
     }
 
-    .books-img{
+    .books-img {
         padding-right: 0 !important;
 
-        img{
+        img {
             height: 400px;
         }
     }
 
-    p{
+    p {
         line-height: 27px;
         text-align: justify;
     }
 }
+
+.custom-heading {
+    text-align: center;
+    padding: 50px 0px;
+
+
+    &::before {
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        display: block;
+        color: #e2693c;
+        font-size: 50px;
+    }
+}
+
+.latest-books {
+    .custom-heading {
+        &::before {
+            content: "\f518";
+        }
+    }
+
+    .card {
+        height: 100%;
+
+        .card-body {
+            position: relative;
+
+            .available {
+                position: absolute;
+                top: 30px;
+                background-color: $brand-color;
+                color: white;
+                font-size: 12px;
+                line-height: 17px;
+                font-weight: 300;
+                text-align: center;
+                padding: 3px 10px;
+            }
+
+        }
+
+        .star-rating {
+            color: $brand-color;
+        }
+
+    }
+
+}
+
+.custom-btn{
+    background-color: $brand-color;
+    border-color: $brand-color;
+
+    &:hover{
+        background-color: $brand-color-dark;
+        border-color: $brand-color;
+    }
+
+    &:focus{
+        background-color: $brand-color-dark !important;
+        box-shadow: none !important ;
+        border-color: $brand-color !important;
+    }
+
+    &:active{
+        background-color: $brand-color-dark;
+    }
+}
+
+.contact-us {
+    background-color: $light-color;
+    padding-bottom: 60px;
+
+    .custom-heading {
+        &::before {
+            content: "\f4ad";
+        }
+    }
+
+    form input,
+    form textarea{
+        &:focus{
+            box-shadow: none !important;
+            border-color: $brand-color;
+        }
+    }
+
+    .contact-info {
+        padding: 5px;
+        margin: 0px 15px;
+        width: 100%;
+        border-radius: 10px;
+        text-align: right;
+
+        ul li {
+            font-size: 20px;
+            line-height: 30px;
+            color: $dark-color;
+
+            i {
+                font-size: 25px;
+                padding-top: 3px;
+                padding-left: 10px;
+                color: $brand-color;
+            }
+        }
+
+
+    }
+}
+
+#backToTop {
+    display: none; 
+    position: fixed; 
+    bottom: 20px; 
+    right: 25px; 
+    z-index: 20; 
+    border: none; 
+    outline: none; 
+    background-color: $brand-color; 
+    color: $light-color;
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 10%;
+    font-size: 25px; 
+
+    &:hover{
+        background-color: rgba($brand-color, .85);
+    }
+  }
+  
+  .footer{
+      padding: 20px 0px 15px;
+      color: $dark-color;
+
+      .copyright{
+          line-height: 30px;
+      }
+
+      .social-icons{
+          ul li a{
+            color: $dark-color;
+            font-size: 25px;
+            &:hover{
+                color: $brand-color;
+            }
+          }
+        
+      }
+  }
+
+
+  @media(max-width:991px){
+    .navbar ul li {
+        padding-right: 0px; 
+    }
+  }
+
+  @media(max-width:767px){
+    .top-heading{
+        text-align: center;
+    }
+
+    .custom-heading {
+        padding: 25px 0px;
+    }
+
+    .map{
+        padding-top: 60px;
+    }
+
+
+  }
+
+  @media(max-width:576px){
+    section.about .about-description {
+        padding-right: 15px !important;
+    }
+
+    .top-heading{
+        font-size: 30px !important;
+    }
+
+    .copyright{
+        text-align: center;
+        float: none !important;
+    }
+
+    .social-icons{
+        text-align: center;
+        float: none !important;
+    }
+  }
+
+
+  @media screen and (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
