@@ -1,4 +1,5 @@
 @import 'variables';
+@import 'books';
 
 @font-face {
     font-family: GE-SS;
@@ -177,6 +178,10 @@ section.about {
     background-color: $light-color;
     padding-bottom: 60px;
 
+    .error{
+        color: red;
+    }
+
     .custom-heading {
         &::before {
             content: "\f4ad";
@@ -210,7 +215,6 @@ section.about {
                 color: $brand-color;
             }
         }
-
 
     }
 }

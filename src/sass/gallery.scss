@@ -1,0 +1,32 @@
+.photo-gallery {
+    color:#313437;
+    background-color:#fff;
+  
+   .photos {
+
+    div{
+        margin: 0px 10px;
+        border-radius: 10px;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+
+        &:hover{
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+        }
+
+        
+    }
+    /*
+    .lb-outerContainer {
+        height: 512px !important;
+        width: 365px !important;
+    }
+    */
+  
+    .item {
+    padding-bottom:0px;
+    padding: 0;
+  }
+}
+  
+}
+

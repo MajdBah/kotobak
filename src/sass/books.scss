@@ -1,0 +1,223 @@
+@import 'gallery';
+
+@mixin themable($book-id, $book-color) {
+    .#{$book-id} {
+        header {
+            background-image: url(../images/pages-and-hard-cover-books.jpg);
+            background-size: cover;
+            position: relative;
+
+
+            .overlay {
+                background-color: $book-color;
+                width: 100%;
+                height: 100%;
+                opacity: .85;
+                position: absolute;
+
+
+            }
+
+            .navbar {
+                background-color: transparent;
+
+                .navbar-brand {
+                    a {
+                        color: #fff;
+                    }
+                }
+
+                ul .nav-item a {
+                    color: #fff !important;
+
+                    &:hover {
+                        color: $book-color !important;
+                        border-radius: 20px;
+                    }
+                }
+
+                .navbar-toggler {
+                    color: #fff !important;
+
+
+                    &:hover {
+                        color: $book-color;
+                    }
+
+                    &:focus {
+                        color: $book-color;
+                        outline: none;
+                    }
+
+                    &:active {
+                        color: $book-color;
+                    }
+                }
+            }
+
+            .about-book {
+                padding: 80px 0px 115px;
+                color: #fff;
+
+                .custom-heading {
+                    height: 90px;
+                    padding: 50px 0px 100px;
+                }
+
+                .about-description {
+                    text-align: justify;
+                    color: $dark-color;
+                }
+
+                .about-light{
+                    color: $light-color;
+                }
+
+                img {
+                    width: 80%;
+                    border: solid #fff 5px;
+                    margin: 0 auto;
+                    border-radius: 10px;
+                }
+            }
+        }
+
+        .book-info {
+            padding-bottom: 50px;
+
+            .custom-heading {
+                &::before {
+                    content: "\f0ca";
+                    color: $book-color;
+                }
+            }
+
+        }
+
+        .order {
+            background-color: rgba($book-color, .3);
+            padding: 30px 0px 110px;
+
+            .custom-heading {
+                &::before {
+                    content: "\f291";
+                    color: $book-color;
+                }
+            }
+
+            .card {
+                box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+                color: $dark-color;
+                max-width: 540px;
+
+                ul li {
+
+                    i {
+                        padding-left: 5px;
+                    }
+
+                    a {
+                        text-decoration: none;
+                        color: $dark-color;
+
+                        &:hover {
+                            color: $book-color;
+                        }
+                    }
+
+                }
+
+                .add-to-cart-btn {
+                    background-color: $book-color;
+                    color: #fff;
+                }
+
+                .price {
+                    font-size: 25px;
+                    line-height: 30px;
+                    color: $book-color;
+                    padding: 0.375rem 0;
+                }
+            }
+        }
+
+        #backToTop {
+            background-color: $book-color;
+
+            &:hover {
+                background-color: rgba($book-color, .85);
+            }
+        }
+
+        .footer {
+
+            .copyright {
+                line-height: 30px;
+            }
+
+            .social-icons {
+                ul li a {
+                    color: $book-color;
+
+                    &:hover {
+                        color: $book-color;
+                        opacity: .7;
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+@media (max-width:1199px){
+    .card {
+        max-width: 450px !important;
+    }
+}
+
+@media (max-width:991px){
+    ul.navbar-nav.ml-auto{
+        padding-top: 0 !important;
+        margin-top: 0 !important;
+    }
+
+    .img-container{
+        align-self: center;
+    }
+
+    .card {
+        max-width: 100% !important;
+    }
+}
+
+@media (max-width:767px){
+
+    .about-book {
+        padding: 20px 0px 90px !important;
+    }
+
+    .card {
+        margin-bottom: 25px !important;
+    }
+
+    .photos {
+        .item{
+            margin-bottom: 25px !important;
+        }
+    }
+}
+
+@media (max-width:330px){
+
+.custom-heading {
+    height: 200px !important;
+}
+
+}
+
+
+// Book1 colors
+@include themable(book-1, #2DA2E1);
+// Book2 colors
+@include themable(book-2, #804019);

@@ -6,7 +6,7 @@ const loader = require("sass-loader");
 module.exports = {
 
     entry: './src/js/index.js',
-
+    
     output: {
         
         filename: 'js/bundle.js',
@@ -23,7 +23,18 @@ module.exports = {
     plugins: [
 
         new HtmlWebpackPlugin({
-            template: './src/index.html', 
+            template: './src/index.html',
+            filename: 'index.html'
+        }),
+
+        new HtmlWebpackPlugin({
+            template: './src/book1.html',
+            filename: 'book1.html'
+        }),
+
+        new HtmlWebpackPlugin({
+            template: './src/book2.html',
+            filename: 'book2.html'
         }),
 
         new MiniCssExtractPlugin({
@@ -45,9 +56,8 @@ module.exports = {
                             publicPath: '../'
                         }
                     },
-                    // Translates CSS into CommonJS
+
                     "css-loader",
-                    // Compiles Sass to CSS
                     "sass-loader",
                 ],
             },
