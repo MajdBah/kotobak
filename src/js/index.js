@@ -23,6 +23,24 @@ document.getElementById("year").innerHTML = new Date().getFullYear();
 // form validation
 $("#contact-form").validate();
 
+
+//fixed menu
+$(window).scroll(function() {
+  if ($(this).scrollTop() >= 550) {
+      $("#navbar").addClass("navbg");
+  } else {
+      $("#navbar").removeClass("navbg");
+  }
+});
+
+$("a.scroll").on('click', function(event) {
+
+  var hash = this.hash;
+
+  $('html, body').animate({ scrollTop: $(hash).offset().top - 70 }, function() {});
+
+});
+
   });
 
 

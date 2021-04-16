@@ -17,6 +17,12 @@ body {
 
 .navbar {
     background-color: $navbar-background;
+    position: fixed !important;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 12;
+    
 
     .navbar-brand {
         a {
@@ -30,6 +36,8 @@ body {
         color: $dark-color;
         border: 0;
         font-size: 25px;
+        -webkit-transition: all 1s ease;
+        transition: all 1s ease;
 
         &:hover {
             color: $brand-color;
@@ -50,7 +58,7 @@ body {
     }
 
     ul .nav-item a {
-        color: $dark-color !important;
+        color: $dark-color ;
         padding: 0.5rem 1.1rem !important;
 
         &:hover {
@@ -61,6 +69,8 @@ body {
         }
     }
 
+
+
 }
 
 .top-heading {
@@ -68,12 +78,19 @@ body {
     line-height: 60px;
 }
 
+.active {
+    background-color: white;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    color: $brand-color !important;
+}
+
 section.about {
     background-image: url(../images/library-books.jpg);
     background-size: auto;
     background-repeat: no-repeat;
     background-position: center;
-    padding: 35px 0px;
+    padding: 105px 0px 35px;
     color: $light-color;
     position: relative;
 
@@ -154,22 +171,22 @@ section.about {
 
 }
 
-.custom-btn{
+.custom-btn {
     background-color: $brand-color;
     border-color: $brand-color;
 
-    &:hover{
+    &:hover {
         background-color: $brand-color-dark;
         border-color: $brand-color;
     }
 
-    &:focus{
+    &:focus {
         background-color: $brand-color-dark !important;
-        box-shadow: none !important ;
+        box-shadow: none !important;
         border-color: $brand-color !important;
     }
 
-    &:active{
+    &:active {
         background-color: $brand-color-dark;
     }
 }
@@ -178,7 +195,7 @@ section.about {
     background-color: $light-color;
     padding-bottom: 60px;
 
-    .error{
+    .error {
         color: red;
     }
 
@@ -189,8 +206,8 @@ section.about {
     }
 
     form input,
-    form textarea{
-        &:focus{
+    form textarea {
+        &:focus {
             box-shadow: none !important;
             border-color: $brand-color;
         }
@@ -220,54 +237,55 @@ section.about {
 }
 
 #backToTop {
-    display: none; 
-    position: fixed; 
-    bottom: 20px; 
-    right: 25px; 
-    z-index: 20; 
-    border: none; 
-    outline: none; 
-    background-color: $brand-color; 
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 25px;
+    z-index: 20;
+    border: none;
+    outline: none;
+    background-color: $brand-color;
     color: $light-color;
     cursor: pointer;
     padding: 10px 15px;
     border-radius: 10%;
-    font-size: 25px; 
+    font-size: 25px;
 
-    &:hover{
+    &:hover {
         background-color: rgba($brand-color, .85);
     }
-  }
-  
-  .footer{
-      padding: 20px 0px 15px;
-      color: $dark-color;
+}
 
-      .copyright{
-          line-height: 30px;
-      }
+.footer {
+    padding: 20px 0px 15px;
+    color: $dark-color;
 
-      .social-icons{
-          ul li a{
+    .copyright {
+        line-height: 30px;
+    }
+
+    .social-icons {
+        ul li a {
             color: $dark-color;
             font-size: 25px;
-            &:hover{
+
+            &:hover {
                 color: $brand-color;
             }
-          }
-        
-      }
-  }
+        }
 
-
-  @media(max-width:991px){
-    .navbar ul li {
-        padding-right: 0px; 
     }
-  }
+}
 
-  @media(max-width:767px){
-    .top-heading{
+
+@media(max-width:991px) {
+    .navbar ul li {
+        padding-right: 0px;
+    }
+}
+
+@media(max-width:767px) {
+    .top-heading {
         text-align: center;
     }
 
@@ -275,36 +293,36 @@ section.about {
         padding: 25px 0px;
     }
 
-    .map{
+    .map {
         padding-top: 60px;
     }
 
 
-  }
+}
 
-  @media(max-width:576px){
+@media(max-width:576px) {
     section.about .about-description {
         padding-right: 15px !important;
     }
 
-    .top-heading{
+    .top-heading {
         font-size: 30px !important;
     }
 
-    .copyright{
+    .copyright {
         text-align: center;
         float: none !important;
     }
 
-    .social-icons{
+    .social-icons {
         text-align: center;
         float: none !important;
     }
-  }
+}
 
 
-  @media screen and (prefers-reduced-motion: no-preference) {
+@media screen and (prefers-reduced-motion: no-preference) {
     html {
-      scroll-behavior: smooth;
+        scroll-behavior: smooth;
     }
-  }
+}

@@ -14,8 +14,6 @@
                 height: 100%;
                 opacity: .85;
                 position: absolute;
-
-
             }
 
             .navbar {
@@ -55,8 +53,21 @@
                 }
             }
 
+            .navbg {
+                background-color: rgba($book-color, .9) !important;
+                box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+
+                .active {
+                    border-radius: 20px;
+                }
+                
+                a.nav-link.active {
+                    color: $book-color !important;
+                }
+            }
+
             .about-book {
-                padding: 80px 0px 115px;
+                padding: 155px 0px 115px;
                 color: #fff;
 
                 .custom-heading {
@@ -167,8 +178,8 @@
 
             }
         }
-    }
-}
+    
+
 
 @media (max-width:1199px){
     .card {
@@ -189,12 +200,16 @@
     .card {
         max-width: 100% !important;
     }
+
+    .navbar ul .nav-item a {
+        margin-bottom: 5px;
+    }
 }
 
 @media (max-width:767px){
 
     .about-book {
-        padding: 20px 0px 90px !important;
+        padding: 60px 0px 90px !important;
     }
 
     .card {
@@ -210,6 +225,11 @@
     #backToTop {
         padding: 5px 10px !important;
     }
+
+   .navbar {
+        background-color: rgba($book-color, .8) !important;
+    }
+    
 }
 
 @media (max-width:330px){
@@ -220,6 +240,8 @@
 
 }
 
+}
+}
 
 // Book1 colors
 @include themable(book-1, #2DA2E1);
